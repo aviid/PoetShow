@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Poet Show</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<style type="text/css">
+		.container{
+			max-width: 850px
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
+	    <div class="container">
+	        <a class="navbar-brand" href="#">Poet Show</a>
+	        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+	          <span class="navbar-toggler-icon"></span>
+	        </button>
+
+	        <div class="collapse navbar-collapse" id="navbarsExample07">
+		        <ul class="navbar-nav mb-2 ml-auto mb-lg-0">
+			        <li class="nav-item">
+			          <a href="#" class="nav-link logged-in" style="display: none;" data-toggle="modal" data-target="#createModal"  >Create Poems</a>
+			        <li class="nav-item">
+			        </li>
+			        <li class="nav-item">
+			          <a href="#" class="nav-link logged-in" style="display: none;" data-toggle="modal" data-target="#accountModal" >Account</a>
+              </li>
+              <li class="nav-item">
+			          <a href="#" class="nav-link logged-in" style="display: none;" id="logout" aria-current="page">Logout</a>
+			        </li>
+              <li class="nav-item">
+                <a  href="#" class="nav-link logged-out" style="display: none;" data-toggle="modal" data-target="#loginModal">Login</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link logged-out" style="display: none;" data-toggle="modal" data-target="#signupModal" >Signup</a>
+              </li>
+			      </ul>
+	        </div>
+	    </div>x
+	</nav>
+
+  <div class="container py-3" id="poems">
+    
+  </div>
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form id="loginForm">
+          <div class="modal-header" style="border-bottom: 0px">
+            <h5 class="modal-title" id="staticBackdropLabel">User Login</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            
+              <input type="email" name="email" id="signin-email" class="form-control mb-3" placeholder="Email">
+              <input type="password" name="password" id="signin-pass" class="form-control" placeholder="Password">
+            
+          </div>
+          <div class="modal-footer" style="border-top: 0px">
+            <button type="submit" class="btn btn-primary" style="width: 200px">login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- Signup Modal -->
+  <div class="modal fade" id="signupModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form id="signup-form">
+          <div class="modal-header" style="border-bottom: 0px">
+            <h5 class="modal-title" id="staticBackdropLabel">Sign up</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <input type="email" name="email" id="signup-email" class="form-control mb-3" placeholder="Email">
+            <input type="password" name="password" id="signup-pass" class="form-control mb-3" placeholder="Password">
+            <input type="text" id="signup-bio"  class="form-control" placeholder="Bio">
+          </div>
+          <div class="modal-footer" style="border-top: 0px">
+            <button type="submit" class="btn btn-success" style="width: 200px">Sign up</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Create Modal -->
+  <div class="modal fade" id="createModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form id="create-form">
+          <div class="modal-header" style="border-bottom: 0px">
+            <h5 class="modal-title" id="staticBackdropLabel">Create Poems</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <input type="text" name="title" id="title" class="form-control mb-3" placeholder="Poem Title">
+            <textarea class="form-control" id="content" placeholder="Poem"></textarea>
+          </div>
+          <div class="modal-footer" style="border-top: 0px">
+            <button type="submit" class="btn btn-primary" style="width: 200px">login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Account Modal-->
+  <div class="modal fade" id="accountModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="border-bottom: 0px">
+          <h5 class="modal-title" id="staticBackdropLabel">Account Details</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="account-details">
+        
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-firestore.js"></script>
+  
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+  
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAPhEaL8dOySshqF5yJPwlx8BEgX6P7XDc",
+        authDomain: "poetshow-ed238.firebaseapp.com",
+        projectId: "poetshow-ed238",
+        appId: "1:958945089464:web:44a3cdaca8aacdd8af214d"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+  
+  
+      //Make auth and firestore reference
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+  
+  
+    </script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+<script src="script/auth.js"></script>
+<script src="script/index.js"></script>
+</body>
+</html>
