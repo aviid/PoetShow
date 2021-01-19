@@ -1,10 +1,10 @@
 # Poet Show
 
-A simple firebase program to demostrate the use of firebase with vanilla javascript, html and csss (Bootstrap)
+A simple firebase application to demostrate the use of firebase with vanilla javascript, html and csss (Bootstrap)
 
 ## Codes
 
-The code are very easy to understand and will help you understand firebase auth properly.
+The codes are very easy to understand and will help you understand firebase auth properly.
 
 ```bash
 git clone https://github.com/aviid/PoetShow.git
