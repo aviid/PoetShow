@@ -4,9 +4,7 @@ A simple firebase application to demostrate the use of firebase with vanilla jav
 
 
 ## Link
-```bash
-https://poetshow-ed238.web.app/
-```
+(https://poetshow-ed238.web.app/)
 
 
 ## Codes
