@@ -20,5 +20,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update me and @aviid so that i will be notified when you finish your version.
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+
